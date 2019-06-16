@@ -1,5 +1,5 @@
 --
--- PostgreSQL database dump
+-- nextoriaQL database dump
 --
 
 -- Dumped from database version 10.8 (Ubuntu 10.8-0ubuntu0.18.04.1)
@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: entity_state; Type: TYPE; Schema: public; Owner: postgres
+-- Name: entity_state; Type: TYPE; Schema: public; Owner: nextoria
 --
 
 CREATE TYPE public.entity_state AS ENUM (
@@ -26,10 +26,10 @@ CREATE TYPE public.entity_state AS ENUM (
 );
 
 
-ALTER TYPE public.entity_state OWNER TO postgres;
+ALTER TYPE public.entity_state OWNER TO nextoria;
 
 --
--- Name: location_key_enum; Type: TYPE; Schema: public; Owner: postgres
+-- Name: location_key_enum; Type: TYPE; Schema: public; Owner: nextoria
 --
 
 CREATE TYPE public.location_key_enum AS ENUM (
@@ -38,10 +38,10 @@ CREATE TYPE public.location_key_enum AS ENUM (
 );
 
 
-ALTER TYPE public.location_key_enum OWNER TO postgres;
+ALTER TYPE public.location_key_enum OWNER TO nextoria;
 
 --
--- Name: user_role; Type: TYPE; Schema: public; Owner: postgres
+-- Name: user_role; Type: TYPE; Schema: public; Owner: nextoria
 --
 
 CREATE TYPE public.user_role AS ENUM (
@@ -51,10 +51,10 @@ CREATE TYPE public.user_role AS ENUM (
 );
 
 
-ALTER TYPE public.user_role OWNER TO postgres;
+ALTER TYPE public.user_role OWNER TO nextoria;
 
 --
--- Name: user_state; Type: TYPE; Schema: public; Owner: postgres
+-- Name: user_state; Type: TYPE; Schema: public; Owner: nextoria
 --
 
 CREATE TYPE public.user_state AS ENUM (
@@ -64,14 +64,14 @@ CREATE TYPE public.user_state AS ENUM (
 );
 
 
-ALTER TYPE public.user_state OWNER TO postgres;
+ALTER TYPE public.user_state OWNER TO nextoria;
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
 
 --
--- Name: age_group; Type: TABLE; Schema: public; Owner: postgres
+-- Name: age_group; Type: TABLE; Schema: public; Owner: nextoria
 --
 
 CREATE TABLE public.age_group (
@@ -82,10 +82,10 @@ CREATE TABLE public.age_group (
 );
 
 
-ALTER TABLE public.age_group OWNER TO postgres;
+ALTER TABLE public.age_group OWNER TO nextoria;
 
 --
--- Name: age_group_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: age_group_id_seq; Type: SEQUENCE; Schema: public; Owner: nextoria
 --
 
 CREATE SEQUENCE public.age_group_id_seq
@@ -96,17 +96,17 @@ CREATE SEQUENCE public.age_group_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.age_group_id_seq OWNER TO postgres;
+ALTER TABLE public.age_group_id_seq OWNER TO nextoria;
 
 --
--- Name: age_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: age_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nextoria
 --
 
 ALTER SEQUENCE public.age_group_id_seq OWNED BY public.age_group.id;
 
 
 --
--- Name: authority_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: authority_seq; Type: SEQUENCE; Schema: public; Owner: nextoria
 --
 
 CREATE SEQUENCE public.authority_seq
@@ -117,10 +117,10 @@ CREATE SEQUENCE public.authority_seq
     CACHE 1;
 
 
-ALTER TABLE public.authority_seq OWNER TO postgres;
+ALTER TABLE public.authority_seq OWNER TO nextoria;
 
 --
--- Name: course; Type: TABLE; Schema: public; Owner: postgres
+-- Name: course; Type: TABLE; Schema: public; Owner: nextoria
 --
 
 CREATE TABLE public.course (
@@ -137,10 +137,10 @@ CREATE TABLE public.course (
 );
 
 
-ALTER TABLE public.course OWNER TO postgres;
+ALTER TABLE public.course OWNER TO nextoria;
 
 --
--- Name: course_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: course_id_seq; Type: SEQUENCE; Schema: public; Owner: nextoria
 --
 
 CREATE SEQUENCE public.course_id_seq
@@ -151,10 +151,10 @@ CREATE SEQUENCE public.course_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.course_id_seq OWNER TO postgres;
+ALTER TABLE public.course_id_seq OWNER TO nextoria;
 
 --
--- Name: course_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: course_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nextoria
 --
 
 ALTER SEQUENCE public.course_id_seq OWNED BY public.course.id;
@@ -173,7 +173,7 @@ CREATE TABLE public.course_methodist (
 ALTER TABLE public.course_methodist OWNER TO nextoria;
 
 --
--- Name: course_skills; Type: TABLE; Schema: public; Owner: postgres
+-- Name: course_skills; Type: TABLE; Schema: public; Owner: nextoria
 --
 
 CREATE TABLE public.course_skills (
@@ -182,10 +182,10 @@ CREATE TABLE public.course_skills (
 );
 
 
-ALTER TABLE public.course_skills OWNER TO postgres;
+ALTER TABLE public.course_skills OWNER TO nextoria;
 
 --
--- Name: course_student; Type: TABLE; Schema: public; Owner: postgres
+-- Name: course_student; Type: TABLE; Schema: public; Owner: nextoria
 --
 
 CREATE TABLE public.course_student (
@@ -195,10 +195,10 @@ CREATE TABLE public.course_student (
 );
 
 
-ALTER TABLE public.course_student OWNER TO postgres;
+ALTER TABLE public.course_student OWNER TO nextoria;
 
 --
--- Name: game; Type: TABLE; Schema: public; Owner: postgres
+-- Name: game; Type: TABLE; Schema: public; Owner: nextoria
 --
 
 CREATE TABLE public.game (
@@ -209,10 +209,10 @@ CREATE TABLE public.game (
 );
 
 
-ALTER TABLE public.game OWNER TO postgres;
+ALTER TABLE public.game OWNER TO nextoria;
 
 --
--- Name: game_data; Type: TABLE; Schema: public; Owner: postgres
+-- Name: game_data; Type: TABLE; Schema: public; Owner: nextoria
 --
 
 CREATE TABLE public.game_data (
@@ -225,10 +225,10 @@ CREATE TABLE public.game_data (
 );
 
 
-ALTER TABLE public.game_data OWNER TO postgres;
+ALTER TABLE public.game_data OWNER TO nextoria;
 
 --
--- Name: game_data_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: game_data_id_seq; Type: SEQUENCE; Schema: public; Owner: nextoria
 --
 
 CREATE SEQUENCE public.game_data_id_seq
@@ -239,17 +239,17 @@ CREATE SEQUENCE public.game_data_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.game_data_id_seq OWNER TO postgres;
+ALTER TABLE public.game_data_id_seq OWNER TO nextoria;
 
 --
--- Name: game_data_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: game_data_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nextoria
 --
 
 ALTER SEQUENCE public.game_data_id_seq OWNED BY public.game_data.id;
 
 
 --
--- Name: game_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: game_id_seq; Type: SEQUENCE; Schema: public; Owner: nextoria
 --
 
 CREATE SEQUENCE public.game_id_seq
@@ -260,17 +260,17 @@ CREATE SEQUENCE public.game_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.game_id_seq OWNER TO postgres;
+ALTER TABLE public.game_id_seq OWNER TO nextoria;
 
 --
--- Name: game_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: game_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nextoria
 --
 
 ALTER SEQUENCE public.game_id_seq OWNED BY public.game.id;
 
 
 --
--- Name: game_properties_token; Type: TABLE; Schema: public; Owner: postgres
+-- Name: game_properties_token; Type: TABLE; Schema: public; Owner: nextoria
 --
 
 CREATE TABLE public.game_properties_token (
@@ -282,10 +282,10 @@ CREATE TABLE public.game_properties_token (
 );
 
 
-ALTER TABLE public.game_properties_token OWNER TO postgres;
+ALTER TABLE public.game_properties_token OWNER TO nextoria;
 
 --
--- Name: game_properties_token_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: game_properties_token_id_seq; Type: SEQUENCE; Schema: public; Owner: nextoria
 --
 
 CREATE SEQUENCE public.game_properties_token_id_seq
@@ -296,17 +296,17 @@ CREATE SEQUENCE public.game_properties_token_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.game_properties_token_id_seq OWNER TO postgres;
+ALTER TABLE public.game_properties_token_id_seq OWNER TO nextoria;
 
 --
--- Name: game_properties_token_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: game_properties_token_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nextoria
 --
 
 ALTER SEQUENCE public.game_properties_token_id_seq OWNED BY public.game_properties_token.id;
 
 
 --
--- Name: image; Type: TABLE; Schema: public; Owner: postgres
+-- Name: image; Type: TABLE; Schema: public; Owner: nextoria
 --
 
 CREATE TABLE public.image (
@@ -325,10 +325,10 @@ CREATE TABLE public.image (
 );
 
 
-ALTER TABLE public.image OWNER TO postgres;
+ALTER TABLE public.image OWNER TO nextoria;
 
 --
--- Name: image_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: image_id_seq; Type: SEQUENCE; Schema: public; Owner: nextoria
 --
 
 CREATE SEQUENCE public.image_id_seq
@@ -339,17 +339,17 @@ CREATE SEQUENCE public.image_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.image_id_seq OWNER TO postgres;
+ALTER TABLE public.image_id_seq OWNER TO nextoria;
 
 --
--- Name: image_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: image_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nextoria
 --
 
 ALTER SEQUENCE public.image_id_seq OWNED BY public.image.id;
 
 
 --
--- Name: lesson; Type: TABLE; Schema: public; Owner: postgres
+-- Name: lesson; Type: TABLE; Schema: public; Owner: nextoria
 --
 
 CREATE TABLE public.lesson (
@@ -367,10 +367,10 @@ CREATE TABLE public.lesson (
 );
 
 
-ALTER TABLE public.lesson OWNER TO postgres;
+ALTER TABLE public.lesson OWNER TO nextoria;
 
 --
--- Name: lesson_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: lesson_id_seq; Type: SEQUENCE; Schema: public; Owner: nextoria
 --
 
 CREATE SEQUENCE public.lesson_id_seq
@@ -381,17 +381,17 @@ CREATE SEQUENCE public.lesson_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.lesson_id_seq OWNER TO postgres;
+ALTER TABLE public.lesson_id_seq OWNER TO nextoria;
 
 --
--- Name: lesson_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: lesson_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nextoria
 --
 
 ALTER SEQUENCE public.lesson_id_seq OWNED BY public.lesson.id;
 
 
 --
--- Name: nextoria_user; Type: TABLE; Schema: public; Owner: postgres
+-- Name: nextoria_user; Type: TABLE; Schema: public; Owner: nextoria
 --
 
 CREATE TABLE public.nextoria_user (
@@ -415,10 +415,10 @@ CREATE TABLE public.nextoria_user (
 );
 
 
-ALTER TABLE public.nextoria_user OWNER TO postgres;
+ALTER TABLE public.nextoria_user OWNER TO nextoria;
 
 --
--- Name: nextoria_user_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: nextoria_user_id_seq; Type: SEQUENCE; Schema: public; Owner: nextoria
 --
 
 CREATE SEQUENCE public.nextoria_user_id_seq
@@ -429,17 +429,17 @@ CREATE SEQUENCE public.nextoria_user_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.nextoria_user_id_seq OWNER TO postgres;
+ALTER TABLE public.nextoria_user_id_seq OWNER TO nextoria;
 
 --
--- Name: nextoria_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: nextoria_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nextoria
 --
 
 ALTER SEQUENCE public.nextoria_user_id_seq OWNED BY public.nextoria_user.id;
 
 
 --
--- Name: skill; Type: TABLE; Schema: public; Owner: postgres
+-- Name: skill; Type: TABLE; Schema: public; Owner: nextoria
 --
 
 CREATE TABLE public.skill (
@@ -450,10 +450,10 @@ CREATE TABLE public.skill (
 );
 
 
-ALTER TABLE public.skill OWNER TO postgres;
+ALTER TABLE public.skill OWNER TO nextoria;
 
 --
--- Name: skill_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: skill_id_seq; Type: SEQUENCE; Schema: public; Owner: nextoria
 --
 
 CREATE SEQUENCE public.skill_id_seq
@@ -464,10 +464,10 @@ CREATE SEQUENCE public.skill_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.skill_id_seq OWNER TO postgres;
+ALTER TABLE public.skill_id_seq OWNER TO nextoria;
 
 --
--- Name: skill_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: skill_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nextoria
 --
 
 ALTER SEQUENCE public.skill_id_seq OWNED BY public.skill.id;
@@ -488,7 +488,7 @@ CREATE TABLE public.student_skill (
 ALTER TABLE public.student_skill OWNER TO nextoria;
 
 --
--- Name: user_codes; Type: TABLE; Schema: public; Owner: postgres
+-- Name: user_codes; Type: TABLE; Schema: public; Owner: nextoria
 --
 
 CREATE TABLE public.user_codes (
@@ -498,10 +498,10 @@ CREATE TABLE public.user_codes (
 );
 
 
-ALTER TABLE public.user_codes OWNER TO postgres;
+ALTER TABLE public.user_codes OWNER TO nextoria;
 
 --
--- Name: user_token_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: user_token_id_seq; Type: SEQUENCE; Schema: public; Owner: nextoria
 --
 
 CREATE SEQUENCE public.user_token_id_seq
@@ -512,17 +512,17 @@ CREATE SEQUENCE public.user_token_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.user_token_id_seq OWNER TO postgres;
+ALTER TABLE public.user_token_id_seq OWNER TO nextoria;
 
 --
--- Name: user_token_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: user_token_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nextoria
 --
 
 ALTER SEQUENCE public.user_token_id_seq OWNED BY public.user_codes.id;
 
 
 --
--- Name: video; Type: TABLE; Schema: public; Owner: postgres
+-- Name: video; Type: TABLE; Schema: public; Owner: nextoria
 --
 
 CREATE TABLE public.video (
@@ -541,10 +541,10 @@ CREATE TABLE public.video (
 );
 
 
-ALTER TABLE public.video OWNER TO postgres;
+ALTER TABLE public.video OWNER TO nextoria;
 
 --
--- Name: video_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: video_id_seq; Type: SEQUENCE; Schema: public; Owner: nextoria
 --
 
 CREATE SEQUENCE public.video_id_seq
@@ -555,94 +555,94 @@ CREATE SEQUENCE public.video_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.video_id_seq OWNER TO postgres;
+ALTER TABLE public.video_id_seq OWNER TO nextoria;
 
 --
--- Name: video_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: video_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nextoria
 --
 
 ALTER SEQUENCE public.video_id_seq OWNED BY public.video.id;
 
 
 --
--- Name: age_group id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: age_group id; Type: DEFAULT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.age_group ALTER COLUMN id SET DEFAULT nextval('public.age_group_id_seq'::regclass);
 
 
 --
--- Name: course id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: course id; Type: DEFAULT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.course ALTER COLUMN id SET DEFAULT nextval('public.course_id_seq'::regclass);
 
 
 --
--- Name: game id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: game id; Type: DEFAULT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.game ALTER COLUMN id SET DEFAULT nextval('public.game_id_seq'::regclass);
 
 
 --
--- Name: game_data id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: game_data id; Type: DEFAULT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.game_data ALTER COLUMN id SET DEFAULT nextval('public.game_data_id_seq'::regclass);
 
 
 --
--- Name: game_properties_token id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: game_properties_token id; Type: DEFAULT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.game_properties_token ALTER COLUMN id SET DEFAULT nextval('public.game_properties_token_id_seq'::regclass);
 
 
 --
--- Name: image id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: image id; Type: DEFAULT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.image ALTER COLUMN id SET DEFAULT nextval('public.image_id_seq'::regclass);
 
 
 --
--- Name: lesson id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: lesson id; Type: DEFAULT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.lesson ALTER COLUMN id SET DEFAULT nextval('public.lesson_id_seq'::regclass);
 
 
 --
--- Name: nextoria_user id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: nextoria_user id; Type: DEFAULT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.nextoria_user ALTER COLUMN id SET DEFAULT nextval('public.nextoria_user_id_seq'::regclass);
 
 
 --
--- Name: skill id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: skill id; Type: DEFAULT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.skill ALTER COLUMN id SET DEFAULT nextval('public.skill_id_seq'::regclass);
 
 
 --
--- Name: user_codes id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: user_codes id; Type: DEFAULT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.user_codes ALTER COLUMN id SET DEFAULT nextval('public.user_token_id_seq'::regclass);
 
 
 --
--- Name: video id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: video id; Type: DEFAULT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.video ALTER COLUMN id SET DEFAULT nextval('public.video_id_seq'::regclass);
 
 
 --
--- Data for Name: age_group; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: age_group; Type: TABLE DATA; Schema: public; Owner: nextoria
 --
 
 COPY public.age_group (id, from_age, up_to_age) FROM stdin;
@@ -662,7 +662,7 @@ COPY public.age_group (id, from_age, up_to_age) FROM stdin;
 
 
 --
--- Data for Name: course; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: course; Type: TABLE DATA; Schema: public; Owner: nextoria
 --
 
 COPY public.course (id, description, intro, title, state, age_group_id, update_date, archive_date, wallpaper_color, icon_url) FROM stdin;
@@ -681,7 +681,7 @@ COPY public.course_methodist (course_id, methodist_id) FROM stdin;
 
 
 --
--- Data for Name: course_skills; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: course_skills; Type: TABLE DATA; Schema: public; Owner: nextoria
 --
 
 COPY public.course_skills (course_id, skills_id) FROM stdin;
@@ -692,7 +692,7 @@ COPY public.course_skills (course_id, skills_id) FROM stdin;
 
 
 --
--- Data for Name: course_student; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: course_student; Type: TABLE DATA; Schema: public; Owner: nextoria
 --
 
 COPY public.course_student (user_id, course_id, current_percent) FROM stdin;
@@ -743,7 +743,7 @@ COPY public.course_student (user_id, course_id, current_percent) FROM stdin;
 
 
 --
--- Data for Name: game; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: game; Type: TABLE DATA; Schema: public; Owner: nextoria
 --
 
 COPY public.game (id, title, game_link, is_tutorial) FROM stdin;
@@ -761,7 +761,7 @@ COPY public.game (id, title, game_link, is_tutorial) FROM stdin;
 
 
 --
--- Data for Name: game_data; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: game_data; Type: TABLE DATA; Schema: public; Owner: nextoria
 --
 
 COPY public.game_data (lesson_id, game_id, config, id, course_id, order_in_lesson) FROM stdin;
@@ -793,7 +793,7 @@ COPY public.game_data (lesson_id, game_id, config, id, course_id, order_in_lesso
 
 
 --
--- Data for Name: game_properties_token; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: game_properties_token; Type: TABLE DATA; Schema: public; Owner: nextoria
 --
 
 COPY public.game_properties_token (id, properties, token, game_data_id, user_id) FROM stdin;
@@ -801,7 +801,7 @@ COPY public.game_properties_token (id, properties, token, game_data_id, user_id)
 
 
 --
--- Data for Name: image; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: image; Type: TABLE DATA; Schema: public; Owner: nextoria
 --
 
 COPY public.image (id, initial_file_name, file_name, compressed_file_name, mime, initial_file_size, compressed_file_size, location_key, compressed_location_key, path, compressed_path, file_extension) FROM stdin;
@@ -821,7 +821,7 @@ COPY public.image (id, initial_file_name, file_name, compressed_file_name, mime,
 
 
 --
--- Data for Name: lesson; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: lesson; Type: TABLE DATA; Schema: public; Owner: nextoria
 --
 
 COPY public.lesson (id, price, course_id, title, "order", update_date, content, state, archive_date, video_id) FROM stdin;
@@ -836,7 +836,7 @@ COPY public.lesson (id, price, course_id, title, "order", update_date, content, 
 
 
 --
--- Data for Name: nextoria_user; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: nextoria_user; Type: TABLE DATA; Schema: public; Owner: nextoria
 --
 
 COPY public.nextoria_user (id, email, name, age, password_hash, role, state, surname, phone_number, last_password_reset_date, enabled, avatar_id, nickname, rating, awards_count) FROM stdin;
@@ -856,7 +856,7 @@ COPY public.nextoria_user (id, email, name, age, password_hash, role, state, sur
 
 
 --
--- Data for Name: skill; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: skill; Type: TABLE DATA; Schema: public; Owner: nextoria
 --
 
 COPY public.skill (id, title, color, icon_url) FROM stdin;
@@ -917,7 +917,7 @@ COPY public.student_skill (user_id, skill_id, value) FROM stdin;
 
 
 --
--- Data for Name: user_codes; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: user_codes; Type: TABLE DATA; Schema: public; Owner: nextoria
 --
 
 COPY public.user_codes (user_id, token, id) FROM stdin;
@@ -928,7 +928,7 @@ COPY public.user_codes (user_id, token, id) FROM stdin;
 
 
 --
--- Data for Name: video; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: video; Type: TABLE DATA; Schema: public; Owner: nextoria
 --
 
 COPY public.video (id, initial_file_name, file_name, compressed_file_name, mime, initial_file_size, compressed_file_size, location_key, compressed_location_key, path, compressed_path, file_extension) FROM stdin;
@@ -943,91 +943,91 @@ COPY public.video (id, initial_file_name, file_name, compressed_file_name, mime,
 
 
 --
--- Name: age_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: age_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nextoria
 --
 
 SELECT pg_catalog.setval('public.age_group_id_seq', 70, true);
 
 
 --
--- Name: authority_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: authority_seq; Type: SEQUENCE SET; Schema: public; Owner: nextoria
 --
 
 SELECT pg_catalog.setval('public.authority_seq', 1, false);
 
 
 --
--- Name: course_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: course_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nextoria
 --
 
 SELECT pg_catalog.setval('public.course_id_seq', 104, true);
 
 
 --
--- Name: game_data_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: game_data_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nextoria
 --
 
 SELECT pg_catalog.setval('public.game_data_id_seq', 41, true);
 
 
 --
--- Name: game_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: game_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nextoria
 --
 
 SELECT pg_catalog.setval('public.game_id_seq', 14, true);
 
 
 --
--- Name: game_properties_token_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: game_properties_token_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nextoria
 --
 
 SELECT pg_catalog.setval('public.game_properties_token_id_seq', 34, true);
 
 
 --
--- Name: image_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: image_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nextoria
 --
 
 SELECT pg_catalog.setval('public.image_id_seq', 54, true);
 
 
 --
--- Name: lesson_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: lesson_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nextoria
 --
 
 SELECT pg_catalog.setval('public.lesson_id_seq', 36, true);
 
 
 --
--- Name: nextoria_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: nextoria_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nextoria
 --
 
 SELECT pg_catalog.setval('public.nextoria_user_id_seq', 138, true);
 
 
 --
--- Name: skill_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: skill_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nextoria
 --
 
 SELECT pg_catalog.setval('public.skill_id_seq', 69, true);
 
 
 --
--- Name: user_token_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: user_token_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nextoria
 --
 
 SELECT pg_catalog.setval('public.user_token_id_seq', 261, true);
 
 
 --
--- Name: video_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: video_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nextoria
 --
 
 SELECT pg_catalog.setval('public.video_id_seq', 48, true);
 
 
 --
--- Name: age_group age_group_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: age_group age_group_pkey; Type: CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.age_group
@@ -1035,7 +1035,7 @@ ALTER TABLE ONLY public.age_group
 
 
 --
--- Name: course course_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: course course_pkey; Type: CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.course
@@ -1043,7 +1043,7 @@ ALTER TABLE ONLY public.course
 
 
 --
--- Name: game_data game_data_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: game_data game_data_pk; Type: CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.game_data
@@ -1051,7 +1051,7 @@ ALTER TABLE ONLY public.game_data
 
 
 --
--- Name: game game_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: game game_pk; Type: CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.game
@@ -1059,7 +1059,7 @@ ALTER TABLE ONLY public.game
 
 
 --
--- Name: game_properties_token game_properties_token_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: game_properties_token game_properties_token_pk; Type: CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.game_properties_token
@@ -1067,7 +1067,7 @@ ALTER TABLE ONLY public.game_properties_token
 
 
 --
--- Name: image image_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: image image_pk; Type: CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.image
@@ -1075,7 +1075,7 @@ ALTER TABLE ONLY public.image
 
 
 --
--- Name: lesson lesson_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: lesson lesson_pkey; Type: CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.lesson
@@ -1083,7 +1083,7 @@ ALTER TABLE ONLY public.lesson
 
 
 --
--- Name: nextoria_user nextoria_user_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: nextoria_user nextoria_user_pkey; Type: CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.nextoria_user
@@ -1091,7 +1091,7 @@ ALTER TABLE ONLY public.nextoria_user
 
 
 --
--- Name: skill skill_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: skill skill_pkey; Type: CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.skill
@@ -1099,7 +1099,7 @@ ALTER TABLE ONLY public.skill
 
 
 --
--- Name: video video_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: video video_pk; Type: CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.video
@@ -1107,63 +1107,63 @@ ALTER TABLE ONLY public.video
 
 
 --
--- Name: fki_game_data_course_id_fk; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fki_game_data_course_id_fk; Type: INDEX; Schema: public; Owner: nextoria
 --
 
 CREATE INDEX fki_game_data_course_id_fk ON public.game_data USING btree (course_id);
 
 
 --
--- Name: game_data_id_uindex; Type: INDEX; Schema: public; Owner: postgres
+-- Name: game_data_id_uindex; Type: INDEX; Schema: public; Owner: nextoria
 --
 
 CREATE UNIQUE INDEX game_data_id_uindex ON public.game_data USING btree (id);
 
 
 --
--- Name: game_id_uindex; Type: INDEX; Schema: public; Owner: postgres
+-- Name: game_id_uindex; Type: INDEX; Schema: public; Owner: nextoria
 --
 
 CREATE UNIQUE INDEX game_id_uindex ON public.game USING btree (id);
 
 
 --
--- Name: game_properties_token_id_uindex; Type: INDEX; Schema: public; Owner: postgres
+-- Name: game_properties_token_id_uindex; Type: INDEX; Schema: public; Owner: nextoria
 --
 
 CREATE UNIQUE INDEX game_properties_token_id_uindex ON public.game_properties_token USING btree (id);
 
 
 --
--- Name: image_id_uindex; Type: INDEX; Schema: public; Owner: postgres
+-- Name: image_id_uindex; Type: INDEX; Schema: public; Owner: nextoria
 --
 
 CREATE UNIQUE INDEX image_id_uindex ON public.image USING btree (id);
 
 
 --
--- Name: nextoria_user_phone_number_uindex; Type: INDEX; Schema: public; Owner: postgres
+-- Name: nextoria_user_phone_number_uindex; Type: INDEX; Schema: public; Owner: nextoria
 --
 
 CREATE UNIQUE INDEX nextoria_user_phone_number_uindex ON public.nextoria_user USING btree (phone_number);
 
 
 --
--- Name: user_codes_user_id_uindex; Type: INDEX; Schema: public; Owner: postgres
+-- Name: user_codes_user_id_uindex; Type: INDEX; Schema: public; Owner: nextoria
 --
 
 CREATE UNIQUE INDEX user_codes_user_id_uindex ON public.user_codes USING btree (user_id);
 
 
 --
--- Name: video_id_uindex; Type: INDEX; Schema: public; Owner: postgres
+-- Name: video_id_uindex; Type: INDEX; Schema: public; Owner: nextoria
 --
 
 CREATE UNIQUE INDEX video_id_uindex ON public.video USING btree (id);
 
 
 --
--- Name: course course_age_group_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: course course_age_group_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.course
@@ -1187,7 +1187,7 @@ ALTER TABLE ONLY public.course_methodist
 
 
 --
--- Name: course_skills course_skills_course_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: course_skills course_skills_course_fk; Type: FK CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.course_skills
@@ -1195,7 +1195,7 @@ ALTER TABLE ONLY public.course_skills
 
 
 --
--- Name: course_skills course_skills_skill_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: course_skills course_skills_skill_fk; Type: FK CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.course_skills
@@ -1203,7 +1203,7 @@ ALTER TABLE ONLY public.course_skills
 
 
 --
--- Name: game_data game_data_course_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: game_data game_data_course_fk; Type: FK CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.game_data
@@ -1211,7 +1211,7 @@ ALTER TABLE ONLY public.game_data
 
 
 --
--- Name: game_data game_data_game_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: game_data game_data_game_fk; Type: FK CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.game_data
@@ -1219,7 +1219,7 @@ ALTER TABLE ONLY public.game_data
 
 
 --
--- Name: game_data game_data_lesson_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: game_data game_data_lesson_fk; Type: FK CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.game_data
@@ -1227,7 +1227,7 @@ ALTER TABLE ONLY public.game_data
 
 
 --
--- Name: game_properties_token game_properties_token_game_data_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: game_properties_token game_properties_token_game_data_fk; Type: FK CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.game_properties_token
@@ -1235,7 +1235,7 @@ ALTER TABLE ONLY public.game_properties_token
 
 
 --
--- Name: game_properties_token game_properties_token_nextoria_user_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: game_properties_token game_properties_token_nextoria_user_fk; Type: FK CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.game_properties_token
@@ -1243,7 +1243,7 @@ ALTER TABLE ONLY public.game_properties_token
 
 
 --
--- Name: lesson lesson_course_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: lesson lesson_course_fk; Type: FK CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.lesson
@@ -1251,7 +1251,7 @@ ALTER TABLE ONLY public.lesson
 
 
 --
--- Name: lesson lesson_video_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: lesson lesson_video_fk; Type: FK CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.lesson
@@ -1259,7 +1259,7 @@ ALTER TABLE ONLY public.lesson
 
 
 --
--- Name: nextoria_user nextoria_user_image_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: nextoria_user nextoria_user_image_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.nextoria_user
@@ -1283,7 +1283,7 @@ ALTER TABLE ONLY public.student_skill
 
 
 --
--- Name: user_codes user_codes_user_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: user_codes user_codes_user_fk; Type: FK CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.user_codes
@@ -1291,7 +1291,7 @@ ALTER TABLE ONLY public.user_codes
 
 
 --
--- Name: course_student user_student_course_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: course_student user_student_course_fk; Type: FK CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.course_student
@@ -1299,7 +1299,7 @@ ALTER TABLE ONLY public.course_student
 
 
 --
--- Name: course_student user_student_student_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: course_student user_student_student_fk; Type: FK CONSTRAINT; Schema: public; Owner: nextoria
 --
 
 ALTER TABLE ONLY public.course_student
@@ -1307,181 +1307,181 @@ ALTER TABLE ONLY public.course_student
 
 
 --
--- Name: TABLE age_group; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE age_group; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON TABLE public.age_group TO nextoria;
 
 
 --
--- Name: SEQUENCE age_group_id_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE age_group_id_seq; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON SEQUENCE public.age_group_id_seq TO nextoria;
 
 
 --
--- Name: SEQUENCE authority_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE authority_seq; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON SEQUENCE public.authority_seq TO nextoria;
 
 
 --
--- Name: TABLE course; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE course; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON TABLE public.course TO nextoria;
 
 
 --
--- Name: SEQUENCE course_id_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE course_id_seq; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON SEQUENCE public.course_id_seq TO nextoria;
 
 
 --
--- Name: TABLE course_skills; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE course_skills; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON TABLE public.course_skills TO nextoria;
 
 
 --
--- Name: TABLE course_student; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE course_student; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON TABLE public.course_student TO nextoria;
 
 
 --
--- Name: TABLE game; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE game; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON TABLE public.game TO nextoria;
 
 
 --
--- Name: TABLE game_data; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE game_data; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON TABLE public.game_data TO nextoria;
 
 
 --
--- Name: SEQUENCE game_data_id_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE game_data_id_seq; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON SEQUENCE public.game_data_id_seq TO nextoria;
 
 
 --
--- Name: SEQUENCE game_id_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE game_id_seq; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON SEQUENCE public.game_id_seq TO nextoria;
 
 
 --
--- Name: TABLE game_properties_token; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE game_properties_token; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON TABLE public.game_properties_token TO nextoria;
 
 
 --
--- Name: SEQUENCE game_properties_token_id_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE game_properties_token_id_seq; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON SEQUENCE public.game_properties_token_id_seq TO nextoria;
 
 
 --
--- Name: TABLE image; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE image; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON TABLE public.image TO nextoria;
 
 
 --
--- Name: SEQUENCE image_id_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE image_id_seq; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON SEQUENCE public.image_id_seq TO nextoria;
 
 
 --
--- Name: TABLE lesson; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE lesson; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON TABLE public.lesson TO nextoria;
 
 
 --
--- Name: SEQUENCE lesson_id_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE lesson_id_seq; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON SEQUENCE public.lesson_id_seq TO nextoria;
 
 
 --
--- Name: TABLE nextoria_user; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE nextoria_user; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON TABLE public.nextoria_user TO nextoria;
 
 
 --
--- Name: SEQUENCE nextoria_user_id_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE nextoria_user_id_seq; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON SEQUENCE public.nextoria_user_id_seq TO nextoria;
 
 
 --
--- Name: TABLE skill; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE skill; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON TABLE public.skill TO nextoria;
 
 
 --
--- Name: SEQUENCE skill_id_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE skill_id_seq; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON SEQUENCE public.skill_id_seq TO nextoria;
 
 
 --
--- Name: TABLE user_codes; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE user_codes; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON TABLE public.user_codes TO nextoria;
 
 
 --
--- Name: SEQUENCE user_token_id_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE user_token_id_seq; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON SEQUENCE public.user_token_id_seq TO nextoria;
 
 
 --
--- Name: TABLE video; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE video; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON TABLE public.video TO nextoria;
 
 
 --
--- Name: SEQUENCE video_id_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE video_id_seq; Type: ACL; Schema: public; Owner: nextoria
 --
 
 GRANT ALL ON SEQUENCE public.video_id_seq TO nextoria;
 
 
 --
--- PostgreSQL database dump complete
+-- nextoriaQL database dump complete
 --
 
